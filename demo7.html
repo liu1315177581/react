@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/react.js"></script>
+<script src="js/react-dom.js"></script>
+<script src="js/browser.min.js"></script>
+</head>
+<body>
+	
+</body>
+<script type="text/babel">
+	var Hellos = React.createClass({
+		getDefaultProps:function(){
+			return {
+				title : "hello world"
+			}
+		},
+		render:function(){
+			return <h1>{this.props.title}</h1>;
+		}
+
+	});
+	ReactDOM.render(
+		<Hellos />,
+		document.body
+	)
+
+</script>
+</html>
