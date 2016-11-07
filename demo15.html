@@ -8,9 +8,44 @@
 <script src="js/browser.min.js"></script>
 </head>
 <body>
-	
+	<div></div>
 </body>
 <script type="text/babel">
-	
+	var Main = React.createClass({
+		render:function(){
+			return (
+				<div class="container">
+					<Mes/>
+					<List/>
+				</div>
+			)
+		}
+	});
+	var List = React.createClass({
+		render:function(){
+			return (
+				
+			)
+		}
+	});
+	var Item = React.createClass({
+		render:function(){
+			return (
+				
+			)
+		}
+	});
+	var Mes = React.createClass({
+		render:function(){
+			return (
+				
+			)
+		}
+	});
+
+	ReactDOM.render(
+		<Main/>,
+		document.body
+	)
 </script>
 </html>
