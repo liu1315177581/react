@@ -1,55 +1,66 @@
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch'  //处理ajax 如不懂 请百度
+
 export const ADD_TODO = 'ADD_TODO';
-export const COMPLETE_TODO = 'COMPLETE_TODO'
+export const COMPLETE_TODO = 'COMPLETE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const SWITCH_SUPPORT = 'SWITCH_SUPPORT'
 
-export function addTodo(text){
-	return {
-		type:ADD_TODO,
-		isMarked:text
-	}
+
+export function addTodo(text) { 
+  return { 
+  	type: ADD_TODO, 
+  	isMarked:text
+  }
 }
-export function addremoves(){
-	return{
-		type:COMPLETE_TODO,
-		text:'123'
-	}
+
+
+export function addremoves() { 
+  return { 
+    type: COMPLETE_TODO, 
+    text:'宣善波'
+  }
 }
+
 export function myservers(){
-	return dispatch=>{
-		fetch('http://cnodejs.org/api/v1/topics')
-		.then(response=>response.json())
-		.then(data=>{
-			dispatch({
-				type:SWITCH_SUPPORT,
-				servers:data
-			})
-		})
-	}
+  return dispatch=>{
+    fetch('https://cnodejs.org/api/v1/topics')
+      .then(response => response.json())
+      .then(data =>{
+          dispatch({
+             type:SWITCH_SUPPORT,
+             servers:data
+          })
+          }
+        ) 
+   }
 }
+
+
 export const VisibilityFilters = [
-		{
-		  title: '全部', 
-		  filter: 'all',
-		},
-		{
-		  title: '精华',
-		  filter: 'good',
-		},
-		{
-		  title: '分享',
-		  filter: 'share',
-		},
-		{
-		  title: '问答',
-		  filter: 'ask',
-		},
-		{
-		  title: '招聘',
-		  filter: 'job',
-		}
-]
+      {
+          title: '全部', 
+          filter: 'all',
+      },
+      {
+          title: '精华',
+          filter: 'good',
+      },
+      {
+          title: '分享',
+          filter: 'share',
+      },
+      {
+          title: '问答',
+          filter: 'ask',
+      },
+      {
+          title: '招聘',
+          filter: 'job',
+      }
+  ]
+
+
+
 export const Myremove = [
       {
           title: '中国', 
@@ -72,3 +83,6 @@ export const Myremove = [
           filter: '5',
       }
 ]
+
+
+
