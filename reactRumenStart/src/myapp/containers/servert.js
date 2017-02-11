@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { ADD_TODO,VisibilityFilters,Myremove,SWITCH_SUPPORT,COMPLETE_TODO } from './seraction'
 
-const VisibilityFilter(state="SHOW_ALL",action){
+function VisibilityFilter(state="SHOW_ALL",action){
 	switch (action.type){
 		case ADD_TODO:
 			return action.isMarked
@@ -9,7 +9,7 @@ const VisibilityFilter(state="SHOW_ALL",action){
 			return state
 	}
 }
-const addcpp = (state = VisibilityFilters,action)=>{
+function addcpp(state = VisibilityFilters,action){
 	switch (action.type){
 		case COMPLETE_TODO:
 			return{
@@ -20,13 +20,13 @@ const addcpp = (state = VisibilityFilters,action)=>{
 				return state
 	}
 }
-const Myremove = (state=Myremove,action)=>{
+function Myremoves(state=Myremove,action){
 	switch(action.type){
 		default:
 			return state
 	}
 }
-const myserversadd = (state="",aciton)=>{
+function myserversadd(state="",aciton){
 	switch(action.type){
 		case SWITCH_SUPPORT:
 			return action.servers
@@ -37,7 +37,7 @@ const myserversadd = (state="",aciton)=>{
 const todoApp = combineReducers({
 	VisibilityFilter,
 	addcpp,
-	Myremove,
+	Myremoves,
 	myserversadd
 })
 export default todoApp

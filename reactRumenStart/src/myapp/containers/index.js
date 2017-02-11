@@ -7,8 +7,8 @@ import createLogger from 'redux-logger'
 import thunk from 'redux-thunk'
 import App from './app'
 import servers from './servert'
-import taps from './tap'
-import Aremover from './myadd'
+//import taps from './tap'
+//import Aremover from './myadd'
 
 let enhancer = compose(
 	applyMiddleware(thunk,createLogger()),
