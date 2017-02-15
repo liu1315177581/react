@@ -1,7 +1,7 @@
 // 引入依赖
 import React from 'react';
 import formProvider from '../utils/formProvider';
-import FomrItem from '../components/FormItem'
+import FormItem from '../components/FormItem'
 
 // 声明Home组件
 class Home extends React.Component {
@@ -58,37 +58,21 @@ class Home extends React.Component {
 {/*表单提交*/}
           <form onSubmit={(e) => this.handleSubmit(e)}> 
 
-            <label>用户名：</label>
-
-{/* onChange函数，统一调用高阶组件传过来的onFormChange函数 */}
-            <input
-              type="text"
-              value={name.value}
-              onChange={(e) => onFormChange('name', e.target.value)}
-            />
-{/* span的显示和隐藏取决于每个的valid的状态 */}
-            {!name.valid && <span>{name.error}</span>}
+            <FormItem label="用户名：" valid={name.valid} error={name.error}>
+              <input type="text" value={name.value} onChange={(e)=>onFormChange('name',e.target.value)} />
+            </FormItem>
             <br/>
-            <label>年龄：</label>
-            <input
-              type="number"
-              value={age.value || ''}
-              onChange={(e) => onFormChange('age', +e.target.value)}
-            />
-            {!age.valid && <span>{age.error}</span>}
+            <FormItem label="年龄：" valid={age.valid} error={age.error}>
+              <input type="number" value={age.value || ''} onChange={(e)=>onFormChange('age',+e.target.value)}/>
+            </FormItem>
             <br/>
-            <label>性别：</label>
-            <select
-              value={gender.value}
-              onChange={(e) => onFormChange('gender', e.target.value)}
-            >
-              <option value="">请选择</option>
-              <option value="male">男</option>
-              <option value="female">女</option>
-            </select>
-            {!gender.valid && <span>{gender.error}</span>}
-            <br/>
-            <br/>
+            <FormItem label="性别" valid={gender.valid} error={gender.error}>
+              <select value={gender.value} onChange={(e)=>onFormChange('gender',e.target.value)}>
+                <option value="">请选择</option>
+                <option value="male">男</option>
+                <option value="female">女</option>
+              </select>
+            </FormItem>
             <input type="submit" value="提交"/>
           </form>
         </main>
