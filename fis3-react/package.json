@@ -1,0 +1,40 @@
+{
+    "name": "fis3-react",
+    "version": "1.0.0",
+    "description": "react project scaffolding",
+    "main": "fis-conf.js",
+    "scripts": {
+        "start": "fis3 server clean && fis3 server start -p 8888",
+        "dev": "fis3 server clean && fis3 release -cw",
+        "pro": "fis3 server clean && fis3 release production -cw",
+        "build": "rm -rf build && fis3 release production -cd ./build"
+    },
+    "keywords": [
+        "react"
+    ],
+    "dependencies": {
+        "antd": "^2.9.3",
+        "immutable": "^3.8.1",
+        "moment": "^2.18.1",
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4",
+        "react-redux": "^5.0.4",
+        "react-router": "^4.1.1",
+        "react-router-redux": "^4.0.8",
+        "redux": "^3.6.0",
+        "redux-thunk": "^2.2.0",
+        "whatwg-fetch": "^2.0.3"
+    },
+    "devDependencies": {
+        "fis-parser-babel-5.x": "^1.4.0",
+        "fis3-deploy-tar": "^1.0.1",
+        "fis3-hook-commonjs": "^0.1.26",
+        "fis3-hook-node_modules": "^2.2.8",
+        "fis3-optimizer-htmlminify": "^1.0.1",
+        "fis3-parser-dfy-node-sass": "^1.0.3",
+        "fis3-postpackager-loader": "^2.1.4",
+        "fis3-preprocessor-js-require-css": "^0.1.1",
+        "fis3-preprocessor-js-require-file": "^0.1.3",
+        "process": "^0.11.10"
+    }
+}
