@@ -4,8 +4,8 @@
     "description": "react project scaffolding",
     "main": "fis-conf.js",
     "scripts": {
-        "start": "fis3 server clean && fis3 server start -p 8888",
-        "dev": "fis3 server clean && fis3 release -cw",
+        "start": "fis3 server start -p 8080",
+        "dev": "fis3 release -cL",
         "pro": "fis3 server clean && fis3 release production -cw",
         "build": "rm -rf build && fis3 release production -cd ./build"
     },

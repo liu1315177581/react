@@ -2,12 +2,18 @@
  * @file main.jsx
  * @email 99874405@qq.com
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import {render} from 'react-dom';
+import { 
+    Counter
+ } from './containers';
 
 
 
-ReactDOM.render(
-    <div> hello niha222233444555</div>,
+render(
+    <div>
+        hello world
+        <Counter />
+    </div>,
     document.getElementById('app')
 );
