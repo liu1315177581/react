@@ -12,7 +12,7 @@ import {
 
 render(
     <div>
-        hello world
+        hello world11122
         <Counter />
     </div>,
     document.getElementById('app')
